@@ -85,15 +85,20 @@ var magic = function (event) {
 
 var initialize = function (){
     console.log("Window is done loading page.");
-    document.querySelector("#slot0").addEventListener("click",magic);
-    document.querySelector("#slot1").addEventListener("click",magic);
-    document.querySelector("#slot2").addEventListener("click",magic);
-    document.querySelector("#slot3").addEventListener("click",magic);
-    document.querySelector("#slot4").addEventListener("click",magic);
-    document.querySelector("#slot5").addEventListener("click",magic);
-    document.querySelector("#slot6").addEventListener("click",magic);
-    document.querySelector("#slot7").addEventListener("click",magic);
-    document.querySelector("#slot8").addEventListener("click",magic);
+    for (var i = 0; i <=8; i++) {
+    document.querySelector("#slot"+ i).addEventListener("click",magic);
+    }
+
+
+    // document.querySelector("#slot0").addEventListener("click",magic);
+    // document.querySelector("#slot1").addEventListener("click",magic);
+    // document.querySelector("#slot2").addEventListener("click",magic);
+    // document.querySelector("#slot3").addEventListener("click",magic);
+    // document.querySelector("#slot4").addEventListener("click",magic);
+    // document.querySelector("#slot5").addEventListener("click",magic);
+    // document.querySelector("#slot6").addEventListener("click",magic);
+    // document.querySelector("#slot7").addEventListener("click",magic);
+    // document.querySelector("#slot8").addEventListener("click",magic);
 };
 
 

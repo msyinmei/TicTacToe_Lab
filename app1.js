@@ -38,28 +38,48 @@ var player2 = {name:"Player 2",marker:"O", clicked:[]};
 //   console.log("this function has run " + numTimes + " time(s).")
 // };
 
-var selectedMarker = "X";
+
+
+// var tracker = function(){
+// if (counter%2 === 0){
+//   player2.clicked.push(currentslot);
+//   console.log("Now, Player 2 has claimed the slots:" + player2.clicked);
+// } else {
+//   player1.clicked.push(currentslot);
+//   console.log("Now, Player 1 has claimed the slots:" + player1.clicked);
+// }
+// };
+
+
+var selectedMarker;
+var counter = 0;
+var currentslot;
 
 var selector = function(){
  if (counter%2 === 0){
-    selectedMarker = player1.marker;
+    selectedMarker = player2.marker;
     console.log(selectedMarker);
  }
  else {
-    selectedMarker = player2.marker;
+    selectedMarker = player1.marker;
     console.log(selectedMarker);
  }
 };
 
-var counter = 0;
-
 var magic = function (event) {
-console.log("Let there be magic!");
-counter++;
-console.log("counter is " + counter);
-selector();
+  console.log("Let there be magic!");
+  counter++;
+  console.log("counter is " + counter);
+  selector();
+  // currentslot = this.id;
+  // console.log(currentslot);
+  if (this.innerHTML === ""){
+  this.innerHTML = selectedMarker;
+} else {
+  return;
+}
+//make sure not to repeat;
   // tracker();
-  // makeMark();
 };
 
 

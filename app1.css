@@ -14,6 +14,9 @@ div.col-xs-4{
   padding:0;
   margin:0 auto;
   line-height:100px;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
 }
 
 .middle-row{
@@ -24,12 +27,4 @@ div.col-xs-4{
 .middle-column{
   border-left:2px solid black;
   border-right:2px solid black;
-}
-
-.cellcontent{
-  padding:0;
-  text-align: center;
-  font-size: 45px;
-  font-weight: bold;
-
 }

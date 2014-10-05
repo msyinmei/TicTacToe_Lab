@@ -8,6 +8,11 @@
 .row {
   width: 300px;
 }
+
+.btn{
+  margin: auto;
+}
+
 div.col-xs-4{
   height: 100px;
   width: 100px;

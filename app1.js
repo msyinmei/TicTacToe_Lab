@@ -3,8 +3,6 @@
 var player1 = {name:"Player 1",marker:"X", clicked:[]};
 var player2 = {name:"Player 2",marker:"O", clicked:[]};
 
-
-
 // var inputMarker = function(){
 // var list_items = document.querySelectorAll("div#essentials > ul > li");
 // for (var i = list_items.length - 1; i >= 0; i--) {
@@ -28,12 +26,10 @@ var player2 = {name:"Player 2",marker:"O", clicked:[]};
 
 // };
 
-
 // var counter = function(event) {
 // for (var i = Things.length - 1; i >= 0; i++) {
 //   Things[i]
 // };
-
 
 //   console.log("this function has run " + numTimes + " time(s).")
 // };
@@ -50,9 +46,8 @@ var player2 = {name:"Player 2",marker:"O", clicked:[]};
 // }
 // };
 
-
-var selectedMarker;
 var counter = 0;
+var selectedMarker;
 var currentslot;
 
 var selector = function(){
@@ -66,39 +61,40 @@ var selector = function(){
  }
 };
 
-var magic = function (event) {
+var clickmagic = function (event) {
   console.log("Let there be magic!");
+  if (this.innerHTML===""){
   counter++;
+  } else {
+    return;
+  }
   console.log("counter is " + counter);
   selector();
-  // currentslot = this.id;
-  // console.log(currentslot);
   if (this.innerHTML === ""){
   this.innerHTML = selectedMarker;
 } else {
   return;
 }
 //make sure not to repeat;
+  // currentslot = this.id;
+  // console.log(currentslot);
   // tracker();
 };
 
+var resetmagic = function(event){
+  console.log("Resetmagic initiated");
+  for (var i = 0; i <=8; i++) {
+    document.querySelector("#slot" + i).innerHTML="";
+  }
+  counter = 0;
+};
 
 var initialize = function (){
     console.log("Window is done loading page.");
     for (var i = 0; i <=8; i++) {
-    document.querySelector("#slot"+ i).addEventListener("click",magic);
+    document.querySelector("#slot"+ i).addEventListener("click",clickmagic);
     }
-
-
-    // document.querySelector("#slot0").addEventListener("click",magic);
-    // document.querySelector("#slot1").addEventListener("click",magic);
-    // document.querySelector("#slot2").addEventListener("click",magic);
-    // document.querySelector("#slot3").addEventListener("click",magic);
-    // document.querySelector("#slot4").addEventListener("click",magic);
-    // document.querySelector("#slot5").addEventListener("click",magic);
-    // document.querySelector("#slot6").addEventListener("click",magic);
-    // document.querySelector("#slot7").addEventListener("click",magic);
-    // document.querySelector("#slot8").addEventListener("click",magic);
+    document.querySelector(".btn").addEventListener("click",resetmagic);
 };
 
 

@@ -1,3 +1,5 @@
+//Note: was super sick this weekend with a fever! Will be doing some more tonight to improve!
+
 
 // Set up players
 var player1 = {name:"Player 1",marker:"X", clicked:[]};
